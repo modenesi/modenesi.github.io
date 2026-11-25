@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Bernardo Modenesi &mdash; Publications</title>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Source+Sans+3:wght@400;600&display=swap'>
+<style>
+:root{
+  --ground:#ffffff; --ink:#14181f; --body:#434b5c; --muted:#79839a;
+  --rule:#e3e7ef; --accent:#1a4fa0; --accent-soft:#e8eefb; --tint:#f3f5f9;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--ground); color:var(--body);
+  font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px; margin:0 auto; padding:1.75rem 1.5rem 3rem}
+.lede{
+  margin:0 0 2.25rem; padding-bottom:1.1rem; border-bottom:1px solid var(--rule);
+  font-size:.875rem; color:var(--muted); line-height:1.55;
+}
+.lede a{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft)}
+.lede a:hover{border-bottom-color:var(--accent)}
+.key{white-space:nowrap}
+.key b{color:var(--accent); font-weight:600}
+
+section{margin:0 0 3.25rem}
+.theme{
+  margin:0 0 .45rem; padding-bottom:.5rem; border-bottom:1px solid var(--rule);
+  font-family:Newsreader,Georgia,'Times New Roman',serif;
+  font-size:1.6rem; font-weight:600; color:var(--ink);
+  line-height:1.25; text-wrap:balance;
+}
+.blurb{
+  margin:0 0 1.6rem; font-size:.875rem; color:var(--muted); line-height:1.55;
+}
+.list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1.5rem}
+.item{display:flex; flex-direction:column; gap:.3rem}
+/* Title and its author-role mark must be ONE flex child, or the column
+   direction drops the mark onto its own line. */
+.titleline{margin:0}
+.title{
+  font-family:Newsreader,Georgia,'Times New Roman',serif;
+  font-size:1.0625rem; font-weight:500; line-height:1.4; color:var(--ink);
+  text-decoration:none; text-wrap:pretty;
+}
+a.title:hover{color:var(--accent); text-decoration:underline; text-underline-offset:2px}
+.mark{color:var(--accent); font-weight:700; font-size:.8em; margin-left:.12em}
+.authors{margin:0; font-size:.875rem; color:var(--body); line-height:1.5}
+.authors b{font-weight:600; color:var(--ink)}
+.meta{
+  margin:.1rem 0 0; display:flex; flex-wrap:wrap; align-items:baseline;
+  gap:.4rem .55rem; font-size:.8125rem; color:var(--muted);
+}
+.pill{
+  display:inline-block; padding:.12rem .45rem; border-radius:3px;
+  font-size:.6875rem; font-weight:600; letter-spacing:.05em;
+  text-transform:uppercase; white-space:nowrap; line-height:1.5;
+}
+/* Fill strength encodes how established the work is, strongest to faintest. */
+.s-published{background:var(--accent); color:#fff}
+.s-under_review{background:var(--accent-soft); color:var(--accent)}
+.s-preprint{background:var(--tint); color:var(--body)}
+.s-in_prep,.s-wip{background:transparent; color:var(--muted); box-shadow:inset 0 0 0 1px var(--rule)}
+.venue{font-style:italic}
+.doi{color:var(--accent); text-decoration:none}
+.doi:hover{text-decoration:underline}
+.year{font-variant-numeric:tabular-nums}
+.dot{color:var(--rule)}
+@media (max-width:480px){
+  .wrap{padding:1.25rem 1rem 2.5rem}
+  .theme{font-size:1.3rem}
+  .title{font-size:1rem}
+  .list{gap:1.35rem}
+  /* The meta line wraps on narrow screens; separators would dangle at the
+     start or end of a wrapped line, so spacing carries the split instead. */
+  .dot{display:none}
+  .meta{gap:.3rem .5rem}
+}
+</style>
+</head><body><div class='wrap'>
+<p class='lede'>Full list on <a href='https://scholar.google.com/citations?user=rldiJ38AAAAJ&hl=en'>Google Scholar</a>. <span class='key'><b>*</b> first, joint-first, or equal contribution</span> &nbsp; <span class='key'><b>+</b> senior author</span></p>
+<section>
+<h2 class='theme'>Machine Learning Methods and Scientific ML</h2>
+<p class='blurb'>Graph learning, information-theoretic objectives, and fast calibration of mechanistic scientific models.</p>
+<ul class='list'>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2605.09099'>GraphNetz: Statistical Benchmarking of Graph Neural Networks with Paired Tests and Rank Aggregation</a><sup class='mark'>*</sup></p>
+<p class='authors'>da Costa K, <strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>Learning on Graphs Conference (LoG)</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://doi.org/10.1016/j.physa.2026.132119'>Perspectives on Tsallis Statistics for Artificial Intelligence</a><sup class='mark'>+</sup></p>
+<p class='authors'>da Costa K, <strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>Physica A: Statistical Mechanics and its Applications</span><span class='dot'>&middot;</span><span class='year'>2026</span><span class='dot'>&middot;</span><span class='cite'>702, 132119</span><span class='dot'>&middot;</span><a class='doi' href='https://doi.org/10.1016/j.physa.2026.132119'>doi:10.1016/j.physa.2026.132119</a></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2509.07013'>Generalized Machine Learning for Fast Calibration of Agent-Based Epidemic Models</a><sup class='mark'>+</sup></p>
+<p class='authors'>Najafzadehkhoei S, Vega Yon G, Meyer DS, <strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-under_review'>under review</span><span class='dot'>&middot;</span><span class='venue'>Epidemics</span><span class='dot'>&middot;</span><span class='year'>2025</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2604.12001'>Divergence-Guided Particle Swarm Optimization</a><sup class='mark'>+</sup></p>
+<p class='authors'>da Costa K, <strong>Modenesi B</strong>, Menezes IF, Lopes H</p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2609.29546'>Generalized Graph Variational Autoencoders: Bounded Divergences Control Posterior Collapse</a><sup class='mark'>+</sup></p>
+<p class='authors'>da Costa K, <strong>Modenesi B</strong>, Menezes IFM, Lopes H</p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2608.02938'>When Should Graph Attention Be Sparse? Learning a Per-Edge Tsallis Index</a><sup class='mark'>+</sup></p>
+<p class='authors'>da Costa K, <strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+</ul></section>
+<section>
+<h2 class='theme'>Responsible AI: Fairness, Explainability, and Evaluation</h2>
+<p class='blurb'>Detecting and quantifying discrimination and uncertainty disparities in deployed models, without thresholds chosen after the fact.</p>
+<ul class='list'>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2611.02639'>Where Is a Prediction Model Miscalibrated, and for Whom? Local Audits in Outcome-Learned Pockets</a><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong>, Chen T, Najafzadehkhoei S, Wang L, Diwan A, Knudsen B</p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>9th AI and Cloud Computing Conference (AICCC 2026), ACM Proceedings</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://doi.org/10.5753/laai-ethics.2024.32473'>AI, Society and Environment: A Possible Complex System Framework</a><sup class='mark'>+</sup></p>
+<p class='authors'>da Costa K, <strong>Modenesi B</strong>, Blay EA, Munoz C</p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>Conferência Latino-Americana de Ética em Inteligência Artificial (LAAI-Ethics)</span><span class='dot'>&middot;</span><span class='year'>2024</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2311.04929'>An Interdisciplinary Outlook on Large Language Models for Scientific Research</a><sup class='mark'>*</sup></p>
+<p class='authors'>Boyko J, Cohen J, Fox N, Han Veiga M, Li JI-H, Liu J, <strong>Modenesi B</strong>, Rauch AH, Reid KN, Tribedi S, Visheratina A, Xie X</p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='year'>2023</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2302.12094'>Evaluating Explainability in Machine Learning Predictions through Explainer-Agnostic Metrics</a></p>
+<p class='authors'>Munoz C, da Costa K, <strong>Modenesi B</strong>, Koshiyama A</p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='year'>2023</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Individual Fairness and Discrimination Detection Using Proximity-Defined Comparison Sets</span><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong>, Chen T</p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+</ul></section>
+<section>
+<h2 class='theme'>AI for Clinical Decision-Making and Health Outcomes</h2>
+<p class='blurb'>Measuring and improving high-stakes clinical decisions with machine learning: shared decision-making, antibiotic choice, screening, and transmission.</p>
+<ul class='list'>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://doi.org/10.1161/JAHA.125.047792'>Out-of-Pocket Costs and Antihypertensive Medication Use Among Veterans: A Natural Experiment</a></p>
+<p class='authors'>Zheutlin AR, Chaitoff A, Addo D, Jacobs JA, Derington CG, Stulberg EL, Glynn P, <strong>Modenesi B</strong>, Cohen J, Bress AP</p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>Journal of the American Heart Association</span><span class='dot'>&middot;</span><span class='year'>2026</span><span class='dot'>&middot;</span><span class='cite'>15(8), e047792</span><span class='dot'>&middot;</span><a class='doi' href='https://doi.org/10.1161/JAHA.125.047792'>doi:10.1161/JAHA.125.047792</a></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Estimating MRSA Transmission and Importation Without Active Surveillance: A Mechanistic Machine Learning Approach</span><sup class='mark'>+</sup></p>
+<p class='authors'>Bohman J, Khader K, Xu Y, <strong>Modenesi B</strong>, Samore M</p>
+<p class='meta'><span class='pill s-under_review'>under review</span><span class='dot'>&middot;</span><span class='venue'>Epidemics</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2608.14792'>Prompting Is Not Enough: Supervised Baselines and Leakage Control for Measuring Shared Decision-Making with LLMs in Pediatric Encounters</a><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong>, Kaphingst K, Zhu A, Wheeler M, Zhang P, Fagerlin A, Lin J</p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='venue'>Target: JAMIA Open</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Mental Wellbeing and Cisgender Men: Current and Perceived Use of Technologies to Support Wellbeing Management</span><sup class='mark'>+</sup></p>
+<p class='authors'>Wong O, Oewel W, Liu Y, LeFevre M, Reddy S, <strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='year'>2027</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Decomposed LLM Classifiers for Title-Abstract Screening: A Validated, Low-Cost and Scalable Pipeline for AI-Assisted Systematic Reviews</span><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong>, Merle J</p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='venue'>Target: Cochrane Evidence Synthesis and Methods</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Predicting Bacterial Pathogen Detection in Pneumonia: Can Viral Diagnostics Improve Clinical Decision-Making? A National Cohort Analysis of 134 Veterans Affairs Emergency Departments</span><sup class='mark'>*</sup></p>
+<p class='authors'>Ju T, <strong>Modenesi B</strong>, Eddington D, Ying J, Nevers M, Zhang C, Rutters E, Khader K, Jones B</p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='venue'>Target: Clinical Infectious Diseases</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Automated Beat-by-Beat Ventricular Rhythm Classification from Implantable Epicardial Electrograms in a Post-Infarction Preclinical Model: A Deep Learning Benchmark with Cross-Subject Generalization</span><sup class='mark'>+</sup></p>
+<p class='authors'>Yektaeian A, Najafzadehkhoei S, <strong>Modenesi B</strong>, Dosdall D</p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Validation of a Novel Artificial Intelligence-Based Model to Assess Quality of Shared Decision Making in Children with Neuromuscular Scoliosis</span><sup class='mark'>+</sup></p>
+<p class='authors'>Lin J, Kaphingst K, Zhu A, Wheeler M, Zhang P, <strong>Modenesi B</strong>, Fagerlin A</p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+</ul></section>
+<section>
+<h2 class='theme'>Causal Inference and Decomposition Methods</h2>
+<p class='blurb'>Estimators that stay honest when the comparison you need does not exist in the data: counterfactual similarity, decomposition beyond common support, and extrapolation bias.</p>
+<ul class='list'>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://doi.org/10.13140/RG.2.1.5140.8720'>Bounds on Policy Relevant Parameters with Discrete Policy Variation</a><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>Master&#x27;s thesis, São Paulo School of Economics, Fundação Getulio Vargas (EESP-FGV)</span><span class='dot'>&middot;</span><span class='year'>2015</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2405.05759'>Advancing Distribution Decomposition Methods Beyond Common Supports: Applications to Racial Wealth Disparities</a><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='year'>2024</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Random Forest Counterfactual Similarity for Causal Inference</span><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong>, Najafzadehkhoei S</p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='venue'>Target: statistical methods journal; submission planned November 2026</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Did Chance Break My Trial? A Test for Unlucky Randomizations, and Which Overlap Checks Survive Many Covariates</span><sup class='mark'>+</sup></p>
+<p class='authors'>Najafzadehkhoei S, <strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>Improving Causal Inference Controls Using Network Theory in Discrete Choice Data</span><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-wip'>in progress</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+</ul></section>
+<section>
+<h2 class='theme'>Labor Market and Network Theory</h2>
+<p class='blurb'>What counts as a market, and what that definition does to every estimate built on top of it.</p>
+<ul class='list'>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://econ.la.psu.edu/wp-content/uploads/sites/5/2026/01/Market-Definition-Bias-in-Studies-of-Labor-Market-Power.pdf'>Market Definition Bias in Studies of (Labor) Market Power</a><sup class='mark'>*</sup></p>
+<p class='authors'>Fogel J, <strong>Modenesi B</strong>, Scuderi B</p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='venue'>Working paper; presented at the Stanford Institute for Theoretical Economics (SITE)</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2405.04365'>Detailed Gender Wage Gap Decompositions: Controlling for Worker Unobserved Heterogeneity Using Network Theory</a><sup class='mark'>*</sup></p>
+<p class='authors'>Fogel J, <strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='year'>2024</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://arxiv.org/abs/2311.00777'>What Is a Labor Market? Classifying Workers and Jobs Using Network Theory</a><sup class='mark'>*</sup></p>
+<p class='authors'>Fogel J, <strong>Modenesi B</strong></p>
+<p class='meta'><span class='pill s-preprint'>preprint</span><span class='dot'>&middot;</span><span class='year'>2023</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><span class='title'>A Network Theory Approach to Imputing Workers&#x27; Occupations in the Longitudinal Employer-Household Dynamics (LEHD)</span><sup class='mark'>*</sup></p>
+<p class='authors'>Fogel J, <strong>Modenesi B</strong>, Nelson D</p>
+<p class='meta'><span class='pill s-in_prep'>in preparation</span><span class='dot'>&middot;</span><span class='year'>2026</span></p>
+</li>
+</ul></section>
+<section>
+<h2 class='theme'>Applied Economics and Public Policy</h2>
+<p class='blurb'>Industrial organization of health care markets, monetary policy and income distribution, and firearm policy evaluation.</p>
+<ul class='list'>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://www.ie.ufrj.br/images/IE/TDS/2023/TD_IE_029_2023_MODENESI_COSTA_et%20al.pdf'>Effects of Monetary Policy on Income Distribution: Evidence from Brazil</a></p>
+<p class='authors'>de Melo Modenesi A, da Costa K, <strong>Modenesi B</strong>, Montani N, Kappes S, da Costa F</p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>Instituto de Economia, Universidade Federal do Rio de Janeiro (IE-UFRJ)</span><span class='dot'>&middot;</span><span class='year'>2023</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://repositorio.ipea.gov.br/items/19e3d47b-362e-455e-8541-0f747d51065d'>Market Definition and Concentration of the Private Health Care Industry in Brazil</a></p>
+<p class='authors'>Andrade MV, Gama MM, Ruiz RM, Maia AC, <strong>Modenesi B</strong>, Tiburcio DM</p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>Pesquisa e Planejamento Econômico (IPEA)</span><span class='dot'>&middot;</span><span class='year'>2012</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://ideas.repec.org/h/cdp/diam10/111.html'>Private Health Care Market Definition and Concentration in the State of Minas Gerais</a><sup class='mark'>*</sup></p>
+<p class='authors'><strong>Modenesi B</strong>, Andrade MV, Maia AC</p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>Proceedings of the 14th Seminar on the Economy of Minas Gerais, CEDEPLAR-UFMG</span><span class='dot'>&middot;</span><span class='year'>2010</span></p>
+</li>
+<li class='item'>
+<p class='titleline'><a class='title' href='https://ideas.repec.org/p/cdp/texdis/td400.html'>Private Health Industry Structure in Brazil</a></p>
+<p class='authors'>Andrade MV, Gama MM, Ruiz RM, Maia AC, <strong>Modenesi B</strong>, Tiburcio DM</p>
+<p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>CEDEPLAR-UFMG</span><span class='dot'>&middot;</span><span class='year'>2010</span></p>
+</li>
+</ul></section>
+</div></body></html>
