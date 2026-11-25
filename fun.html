@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Other fun stuff | Bernardo Modenesi</title>
+<meta name="description" content="Other fun stuff: data science and running.">
+<meta property="og:title" content="Other fun stuff | Bernardo Modenesi">
+<meta property="og:description" content="Other fun stuff: data science and running.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://modenesi.github.io/fun.html">
+<meta property="og:image" content="https://modenesi.github.io/assets/modenesi_headshot_square_800.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Questrial&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head><body class="dark">
+<header class="banner" style="background-image:url('img/banner_fun.jpg'); background-position:center 35%">
+<div class="bar">
+<a class="site" href="index.html">Bernardo Modenesi</a>
+<nav aria-label="Main"><a href="index.html">Home</a><a href="research.html">Research</a><a href="teaching.html">Teaching</a><a href="cv.html">CV</a><a href="service.html">Conferences &amp; Service</a><a href="code.html">Code</a><a href="fun.html" aria-current="page">Fun</a></nav>
+<details class="menu"><summary aria-label="Menu">&#9776;</summary><nav aria-label="Main (mobile)"><a href="index.html">Home</a><a href="research.html">Research</a><a href="teaching.html">Teaching</a><a href="cv.html">CV</a><a href="service.html">Conferences &amp; Service</a><a href="code.html">Code</a><a href="fun.html" aria-current="page">Fun</a></nav></details>
+</div>
+<h1>Other fun stuff</h1>
+
+</header>
+<main>
+<div class="fun">
+<h2>Data Science + Running: <span class="sub">PREDICTING BETTER THAN THE GIANTS GARMIN &amp; RACEX</span></h2>
+<p>I love both running &amp; data science. The week before my 2023 marathon, I was feeling a bit lost about what my race pace should have been, given that I was a beginner runner.</p>
+<p>In the midst of excitement and anxiety for the race, I selected 7 representative runs I've done, put their data together and thoughtfully created models to predict my average race pace. The best models using a cross-validation criterion were consistently Neural Networks &amp; Decision Trees, but they were giving me faster times than what both my <i>Garmin</i> and <i>RaceX</i> were telling me.</p>
+<p>It turns out that <b class="blue">my two best models were 99% accurate</b> <b>✨</b>, beating Garmin's predictions by ~5min, even though <i>Garmin</i> has super detailed data for +500 runs I've made in my life, in addition to sleep data, etc, plus a huge team of excellent sports data scientists.</p>
+<p>Why <b>Neural Networks</b> &amp; <b>Decision Trees</b>? I had little data (N = 106 miles, from 7 runs) and, among the models that I ran, these were flexible enough to capture all of the data non-linearities (as opposed to restrictive linear regression or k-means), without having a complex data greedy architecture (as opposed to Random Forest or Gradient Boosting, the neural net had a relatively simple architecture).</p>
+<p><u>Data structure:</u> N = 106 miles, from 7 runs, with carefully selected features:</p><ul><li>Dummy for weather temperature: hot or not 🔥</li><li>Dummy for race or no race 🏁</li><li>How long ago each run was (in days) 📅</li><li>Average heart rate for the mile ❤️</li><li>Average pace for the mile 🏃</li><li>Average elevation gain for the mile ⛰️</li><li>Total amount of miles in the run 📏</li><li>Which mile was it in the run 🔢</li></ul>
+<p>Some social media screenshots about this:</p><div class="shots"><img src="img/fun_pace_models.gif" alt="Animated story: runner and data scientist, a table of model predictions for marathon pace, neural network 99.7% accurate" width="1080" height="1920" loading="lazy"><img src="img/fun_marathon_post.jpg" alt="Detroit Free Press Marathon 2023 post: 26.56 miles at 7:32 per mile, 3:20:13" width="430" height="791" loading="lazy"></div>
+</div>
+</main>
+<footer>Bernardo Modenesi &middot; last updated November 2026</footer>
+</body></html>

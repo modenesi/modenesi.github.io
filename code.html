@@ -2,9 +2,9 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Code | Bernardo Modenesi</title>
+<title>Code &amp; Reproducibility | Bernardo Modenesi</title>
 <meta name="description" content="Research software by Bernardo Modenesi and collaborators.">
-<meta property="og:title" content="Code | Bernardo Modenesi">
+<meta property="og:title" content="Code &amp; Reproducibility | Bernardo Modenesi">
 <meta property="og:description" content="Research software by Bernardo Modenesi and collaborators.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://modenesi.github.io/code.html">
@@ -12,21 +12,20 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Questrial&display=swap">
 <link rel="stylesheet" href="assets/site.css">
-</head><body>
-<header class="site"><div class="wrap">
-<a class="brand" href="index.html">Bernardo Modenesi</a>
-<nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="teaching.html">Teaching</a></li><li><a href="service.html">Talks &amp; Service</a></li><li><a href="code.html" aria-current="page">Code</a></li><li><a href="https://www.dropbox.com/scl/fi/fhjtbxzo1or9tgdey2j3v/CV_modenesi.pdf?rlkey=8yk9lc4hxwklq289i4sfi74qi&amp;st=37mr4q9f&amp;dl=0">CV</a></li></ul></nav>
-</div></header>
-<main><div class="wrap">
-<h1 style="margin-bottom:.6rem">Code</h1>
-<p class="lede">Software released with my papers and my students' work. More on
-<a href="https://github.com/modenesi">GitHub</a>.</p>
-<div class="tools"><article class="tool"><span class="lang">Python</span><h3><a href="https://github.com/modenesi/pocket-audit">pocket-audit</a></h3><p>Local audits of a clinical prediction model's calibration: finds groups of patients for whom predicted risks are systematically off. Code for <a href="https://arxiv.org/abs/2611.02639">Modenesi et al. (2026), AICCC</a>.</p></article><article class="tool"><span class="lang">Python</span><h3><a href="https://github.com/kleyt0n/graphnetz">GraphNetz</a></h3><p>Statistical benchmarking of graph neural networks: confidence intervals, paired comparisons with multiple-testing correction, and critical-difference diagrams. With Kleyton da Costa; methods in <a href="https://arxiv.org/abs/2605.09099">da Costa and Modenesi (2026), LoG</a>.</p></article><article class="tool"><span class="lang">Python (JAX)</span><h3><a href="https://github.com/kleyt0n/qjax">qJAX</a></h3><p>Machine learning with Tsallis statistics: replaces fixed choices such as the Gaussian, softmax and Shannon entropy with one learnable parameter, q. With Kleyton da Costa.</p></article><article class="tool"><span class="lang">R (CRAN)</span><h3><a href="https://cran.r-project.org/web/packages/epiworldRcalibrate/index.html">epiworldRcalibrate</a></h3><p>Fast calibration of agent-based epidemic models with pre-trained machine learning models, for use with epiworldR. Led by Ph.D. advisee Sima Najafzadehkhoei (<a href="https://github.com/sima-njf/epiworldRcalibrate">GitHub</a>); methods in <a href="https://arxiv.org/abs/2509.07013">Najafzadehkhoei, Vega Yon, Meyer and Modenesi (2025)</a>.</p></article></div>
-</div></main>
-<footer><div class="wrap">
-<span>Bernardo Modenesi &middot; bernardo.modenesi [at] utah.edu</span>
-<span>Updated November 2026</span>
-</div></footer>
+</head><body class="light">
+<header class="banner light" style="background-image:url('img/banner_code.jpg'); background-position:center">
+<div class="bar">
+<a class="site" href="index.html">Bernardo Modenesi</a>
+<nav aria-label="Main"><a href="index.html">Home</a><a href="research.html">Research</a><a href="teaching.html">Teaching</a><a href="cv.html">CV</a><a href="service.html">Conferences &amp; Service</a><a href="code.html" aria-current="page">Code</a><a href="fun.html">Fun</a></nav>
+<details class="menu"><summary aria-label="Menu">&#9776;</summary><nav aria-label="Main (mobile)"><a href="index.html">Home</a><a href="research.html">Research</a><a href="teaching.html">Teaching</a><a href="cv.html">CV</a><a href="service.html">Conferences &amp; Service</a><a href="code.html" aria-current="page">Code</a><a href="fun.html">Fun</a></nav></details>
+</div>
+<h1>Code &amp; Reproducibility</h1>
+
+</header>
+<main>
+<a class="gh" href="https://github.com/modenesi"><img src="img/github.png" alt="GitHub profile" width="838" height="859" loading="lazy"></a><p class="pk-title">Packages:</p><p class="pkg"><a href="https://github.com/modenesi/pocket-audit">pocket-audit</a><span class="tag">: Where is a prediction model miscalibrated, and for whom?</span></p><p class="about">A clinical prediction model can look well calibrated on average and still be wrong for particular groups of patients. pocket-audit searches for those groups: it learns, from the outcomes themselves, the "pockets" of patients whose predicted risks are systematically too high or too low, and reports how large the gap is and how sure we can be about it, without deciding in advance which subgroups to check. Code for Modenesi et al. (2026), AICCC &lt;<a href="https://arxiv.org/abs/2611.02639">arXiv:2611.02639</a>&gt;.</p><p class="pkg"><a href="https://github.com/kleyt0n/qjax">qJAX</a><span class="tag">: Flexible Machine Learning with Tsallis statistics, built on JAX</span></p><p class="about">Most machine learning tools quietly assume a single shape for randomness and uncertainty: the bell curve, softmax attention, Shannon entropy. These are baked in as fixed rules, and real data often doesn't follow them. Labels are noisy, outcomes have heavy tails, and attention sometimes needs to focus sharply on a few inputs instead of spreading weight over everything. qjax replaces that fixed rule with a single tunable parameter, q, so these familiar tools can stretch to fit the data instead of forcing the data to fit them. Because q is fully differentiable, a model can learn the right setting during training instead of you having to guess it. In practice this means classifiers that resist memorizing mislabeled data, distributions that capture heavy tails a standard Gaussian would miss, and attention that can be as sparse or as dense as the problem needs, all as drop-in JAX functions compatible with <i>jit</i>, <i>vmap</i>, and the training code you already have.</p><p class="pkg"><a href="https://github.com/kleyt0n/graphnetz">GraphNetz</a><span class="tag">: Statistically rigorous Graph Learning benchmarking</span></p><p class="about">Whether you are proposing a new GNN architecture, testing a model on a new graph domain, or comparing existing methods across graph types, GraphNetz turns the usual "train, evaluate, table of accuracies" workflow into a reproducible statistical report. Instead of reporting point estimates alone, it provides confidence intervals for each result, paired model comparisons with multiple-testing correction, and rank-based summaries across datasets using critical-difference diagrams. The goal is not just to crown a leaderboard winner, but to give researchers a principled way to quantify uncertainty, compare methods fairly, and produce the exact evidence reviewers often ask for in graph-learning papers. Detailed methodology in Da Costa and Modenesi (2026) &lt;<a href="https://doi.org/10.48550/arXiv.2605.09099">doi.org/10.48550/arXiv.2605.09099</a>&gt;.</p><p class="pkg"><a href="https://cran.r-project.org/web/packages/epiworldRcalibrate/index.html">epiworldRcalibrate</a><span class="tag">: Fast and Effortless Calibration of Agent-Based Models using Machine Learning (<a href="https://github.com/sima-njf/epiworldRcalibrate"><i>GitHub</i></a>)</span></p><p class="about">Provides tools and pre-trained Machine Learning [ML] models for calibration of Agent-Based Models [ABMs] built with the R package 'epiworldR'. Implements methods described in Najafzadehkhoei, Vega Yon, Meyer and Modenesi (2025) &lt;<a href="https://doi.org/10.48550/arXiv.2509.07013">doi:10.48550/arXiv.2509.07013</a>&gt;. Users can automatically calibrate ABMs in seconds with pre-trained ML models, effectively focusing on simulation rather than calibration. Bridges a gap by allowing public health practitioners to run their own ABMs without the advanced technical expertise often required by calibration.</p>
+</main>
+<footer>Bernardo Modenesi &middot; last updated November 2026</footer>
 </body></html>

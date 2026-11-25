@@ -1,115 +1,147 @@
-/* Layout: one 880px reading column; header with name and nav; home opens with portrait + bio. */
+/* Look of the Google Site "Simple" theme: photo banner with a light Lato title,
+   teal headings, square bullets, red and blue hand-coloured highlights. */
 :root{
-  --bg:#ffffff; --ink:#14181f; --body:#3f4757; --muted:#6f7a90;
-  --rule:#e3e7ef; --accent:#1a4fa0; --accent-soft:#e6edfa; --tint:#f4f6fa;
-  --pill-ink:#ffffff;
-  --display:'Newsreader',Georgia,'Times New Roman',serif;
-  --text:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --ink:#212121; --teal:#226e93; --link:#1a6496; --red:#cc0000; --uni:#e01b1b;
+  --blue:#3c78d8; --navy:#1c4587; --note:#888; --muted:#666; --rule:#e6e6e6;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#10141b; --ink:#eef1f6; --body:#c3cad6; --muted:#8b95a8;
-  --rule:#273041; --accent:#8db0f5; --accent-soft:#1d2a44; --tint:#171d27;
-  --pill-ink:#0d1320; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#10141b; --ink:#eef1f6; --body:#c3cad6; --muted:#8b95a8;
-  --rule:#273041; --accent:#8db0f5; --accent-soft:#1d2a44; --tint:#171d27;
-  --pill-ink:#0d1320; color-scheme:dark}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0; background:var(--bg); color:var(--body); font-family:var(--text);
-  font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased}
-a{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft)}
-a:hover{border-bottom-color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
-.wrap{max-width:880px; margin:0 auto;
-  padding-left:max(20px, env(safe-area-inset-left, 0px));
-  padding-right:max(20px, env(safe-area-inset-right, 0px))}
-header.site{border-bottom:1px solid var(--rule)}
-header.site .wrap{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;
-  gap:.5rem 1.5rem; padding-block:1.1rem}
-.brand{font-family:var(--display); font-size:1.35rem; font-weight:600; color:var(--ink); border:0}
-nav ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.25rem 1.1rem}
-nav a{color:var(--body); border:0; font-size:.95rem}
-nav a:hover,nav a[aria-current="page"]{color:var(--accent)}
-nav a[aria-current="page"]{font-weight:600}
-main .wrap{padding-block:2.25rem 3.5rem}
-h1,h2,h3{font-family:var(--display); color:var(--ink); font-weight:600; line-height:1.25;
-  text-wrap:balance; margin:0}
-h1{font-size:2.1rem}
-h2{font-size:1.45rem; padding-bottom:.45rem; border-bottom:1px solid var(--rule); margin:0 0 1rem}
-h3{font-size:1.1rem; font-weight:500; margin:0 0 .5rem}
-section+section{margin-top:2.75rem}
-p{margin:0}
-.lede{color:var(--muted); font-size:.95rem; margin-bottom:2rem}
+body{margin:0; background:#fff; color:var(--ink); font-family:Lato,Arial,sans-serif;
+  font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px}
+a:hover{color:var(--teal); text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--blue); outline-offset:2px}
+img{max-width:100%; height:auto}
+p{margin:0 0 1rem}
 
-/* Home */
-.hero{display:grid; grid-template-columns:200px minmax(0,1fr); gap:2rem; align-items:start}
-.hero img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:6px; display:block}
-.hero .who{display:flex; flex-direction:column; gap:.9rem; min-width:0}
-.titles{display:flex; flex-direction:column; gap:.1rem; color:var(--muted); font-size:.95rem; line-height:1.45}
-.pron{color:var(--muted); font-size:1rem; font-family:var(--text); font-weight:400; margin-left:.4rem}
-.bio{display:flex; flex-direction:column; gap:.8rem}
-.links{display:flex; flex-wrap:wrap; gap:.4rem .9rem; font-size:.95rem; font-weight:600}
-.contact{font-size:.9rem; color:var(--muted)}
-.callout+section{margin-top:2.75rem}
-.callout{margin-top:2.25rem; padding:.9rem 1.1rem; background:var(--tint); border-radius:6px; font-size:.95rem}
-.news{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.85rem}
-.news li{display:grid; grid-template-columns:5.5rem minmax(0,1fr); gap:1rem; align-items:baseline}
-.news time{font-size:.8rem; font-weight:600; color:var(--accent); letter-spacing:.04em;
-  text-transform:uppercase; font-variant-numeric:tabular-nums; white-space:nowrap}
-.news p{font-size:.97rem}
-.lines{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem}
-.lines a{display:flex; flex-direction:column; gap:.3rem; border:0; padding:1rem; border-radius:6px;
-  background:var(--tint); color:var(--body)}
-.lines a:hover{background:var(--accent-soft)}
-.lines b{font-family:var(--display); font-size:1.05rem; color:var(--ink); font-weight:600; line-height:1.3}
-.lines span{font-size:.88rem; line-height:1.5}
+/* top bar over the banner */
+.bar{position:absolute; top:0; left:0; right:0; z-index:3; display:flex; align-items:center;
+  justify-content:space-between; gap:1rem; padding:14px max(24px, env(safe-area-inset-right, 0px)) 14px max(24px, env(safe-area-inset-left, 0px))}
+.bar .site{color:#fff; font-weight:300; font-size:1.3rem; text-decoration:none; white-space:nowrap}
+.bar nav{display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.2rem 1.6rem}
+.bar nav a{color:rgba(255,255,255,.82); text-decoration:none; font-size:.95rem}
+.bar nav a:hover{color:#fff}
+.bar nav a[aria-current="page"]{color:#fff; font-weight:700}
+.light .bar .site{color:#444}
+.light .bar nav a{color:#555}
+.light .bar nav a[aria-current="page"],.light .bar nav a:hover{color:#111}
+.menu{display:none; position:relative}
+.menu summary{list-style:none; cursor:pointer; color:#fff; font-size:1.6rem; line-height:1; padding:4px 6px}
+.menu summary::-webkit-details-marker{display:none}
+.light .menu summary{color:#333}
+.bar .menu nav{position:absolute; right:0; top:2.4rem; background:#fff; border-radius:4px;
+  box-shadow:0 6px 24px rgba(0,0,0,.18); padding:.6rem 0; min-width:220px; display:flex;
+  flex-direction:column; gap:0}
+.bar .menu nav a{color:#333; padding:.45rem 1.1rem; display:block}
+.bar .menu nav a[aria-current="page"]{color:var(--teal); font-weight:700}
 
-/* Research */
-.key{white-space:nowrap}
-.key b{color:var(--accent)}
-.blurb{color:var(--muted); font-size:.92rem; margin:-.5rem 0 1.3rem}
-.pubs{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1.35rem}
-.pubs li{display:flex; flex-direction:column; gap:.25rem}
-.ptitle{font-family:var(--display); font-size:1.07rem; font-weight:500; color:var(--ink); line-height:1.4; border:0}
-a.ptitle:hover{color:var(--accent)}
-.mark{color:var(--accent); font-weight:700; font-size:.8em; margin-left:.12em}
-.authors{font-size:.9rem}
-.authors strong{color:var(--ink); font-weight:600}
-.meta{display:flex; flex-wrap:wrap; align-items:baseline; gap:.35rem .6rem; font-size:.84rem; color:var(--muted)}
-.pill{display:inline-block; padding:.1rem .45rem; border-radius:3px; font-size:.68rem; font-weight:600;
-  letter-spacing:.05em; text-transform:uppercase; white-space:nowrap; line-height:1.5}
-.s-published{background:var(--accent); color:var(--pill-ink)}
-.s-under_review{background:var(--accent-soft); color:var(--accent)}
-.s-preprint{background:var(--tint); color:var(--body); box-shadow:inset 0 0 0 1px var(--rule)}
-.s-in_prep,.s-wip{color:var(--muted); box-shadow:inset 0 0 0 1px var(--rule)}
-.venue{font-style:italic}
+/* banner */
+.banner{position:relative; min-height:340px; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; text-align:center; background:#555 center/cover no-repeat; padding:70px 20px 40px}
+.banner::before{content:""; position:absolute; inset:0; background:rgba(25,25,25,.48)}
+.banner.light::before{background:rgba(255,255,255,.58)}
+.banner h1{position:relative; margin:0; color:#fff; font-weight:300; letter-spacing:.01em;
+  font-size:clamp(2.6rem, 6.4vw, 5.3rem); line-height:1.08; max-width:900px; text-wrap:balance}
+.banner.light h1{color:#666}
+.banner.home{min-height:380px}
+.banner.home h1{max-width:9ch}
+.banner .pron{position:relative; color:#efefef; font-size:.92rem; margin:1.1rem 0 0}
 
-/* Lists on Teaching, Service, Code */
-.rows{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.55rem}
-.rows li{display:grid; grid-template-columns:7.5rem minmax(0,1fr); gap:1rem; align-items:baseline}
-.rows .when{font-size:.85rem; color:var(--muted); font-variant-numeric:tabular-nums}
-.rows .note{color:var(--muted)}
-.group+.group{margin-top:1.6rem}
-.group .role{color:var(--muted); font-family:var(--text); font-size:.95rem; font-weight:400}
-.group .intro{font-size:.95rem; margin-bottom:.6rem}
-.sub{font-size:.9rem; color:var(--muted)}
-.tools{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem}
-.tool{padding:1.1rem; border:1px solid var(--rule); border-radius:6px; display:flex; flex-direction:column; gap:.4rem}
-.tool .lang{font-size:.75rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--muted)}
-.tool h3 a{border:0; color:var(--ink)}
-.tool h3 a:hover{color:var(--accent)}
-.tool p{font-size:.93rem}
+/* page body */
+main{max-width:1040px; margin:0 auto; padding:46px max(28px, env(safe-area-inset-right, 0px)) 60px max(28px, env(safe-area-inset-left, 0px))}
+h2{color:var(--teal); font-weight:400; font-size:1.75rem; line-height:1.3; margin:2.6rem 0 1rem}
+main > h2:first-child, .col > h2:first-child{margin-top:0}
+h2 small{font-size:1rem; font-weight:700}
+h2.org{font-weight:700; font-size:1.55rem}
+h3{font-size:1.05rem; margin:1.6rem 0 .5rem}
+ul{list-style:square; padding-left:1.4rem; margin:0 0 1rem}
+li{margin:.35rem 0; padding-left:.15rem}
+.note{color:var(--note); font-style:italic}
+.lbl{color:var(--red); font-weight:700}
+b.blue,.blue{color:var(--blue)}
+i.red,.red{color:var(--uni)}
+b.code{color:var(--navy)}
+.heart{color:#ff0000; font-style:italic}
+.years{font-weight:700; margin:-.4rem 0 .6rem}
+.list-title{font-weight:700; margin:1rem 0 .4rem}
 
-footer{border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem}
-footer .wrap{padding-block:1.4rem 2rem; display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; justify-content:space-between}
+/* home */
+.home-grid{display:grid; grid-template-columns:minmax(0,1fr) 290px; gap:56px; align-items:start}
+.postdoc-title{font-weight:700; margin-bottom:.3rem}
+.redline{border:0; border-top:2px solid var(--red); width:80%; margin:1.6rem 0 1.8rem 0}
+.news{list-style:none; padding:0}
+.news li{margin:.6rem 0; padding:0}
+.quick{list-style:none; padding:0; margin-top:1.8rem}
+.quick li{margin:.55rem 0}
+.quick a{color:#4a86e8}
+.side{font-family:'Century Gothic','URW Gothic L','URW Gothic',Questrial,Lato,sans-serif; font-size:.8rem; line-height:1.55}
+.side .photo{display:block; width:100%; margin-bottom:1rem}
+.side p{margin:0 0 .35rem}
+.side .profile{font-family:Lato,Arial,sans-serif; font-size:.95rem; margin-bottom:.6rem}
+.side .profile b{color:var(--uni); font-family:'Roboto Serif',Georgia,serif}
+.side .mail{font-weight:700; margin:.9rem 0 1.1rem; white-space:nowrap}
+.side .d{color:#980000; font-weight:700}
+.side .uu{color:#980000; font-size:.95rem}
+.side hr{border:0; border-top:1px solid #444; width:75%; margin:.5rem 0}
+.side a{color:inherit}
 
-@media (max-width:640px){
-  body{font-size:16px}
-  .hero{grid-template-columns:1fr; gap:1.25rem}
-  .hero img{max-width:180px}
-  h1{font-size:1.8rem}
-  .lines,.tools{grid-template-columns:1fr}
-  .news li,.rows li{grid-template-columns:1fr; gap:.05rem}
+/* research */
+.scholar{display:flex; gap:1.1rem; align-items:center; margin-bottom:.5rem}
+.scholar img{width:64px; flex:none}
+.scholar p{margin:0; color:var(--muted); font-size:.95rem}
+.blurb{color:var(--muted); font-style:italic; margin:-.5rem 0 .9rem}
+.pubs li{margin:0 0 1.05rem}
+.ptitle{font-weight:700}
+.mark{color:var(--red); font-weight:700; margin-left:.1em}
+.authors,.meta{display:block; font-size:.93rem}
+.authors strong{color:#000}
+.meta{color:var(--muted)}
+.st{font-size:.72rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; margin-right:.45rem}
+.st-published{color:#38761d} .st-under_review{color:#b45f06} .st-preprint{color:var(--blue)}
+.st-in_prep,.st-wip{color:#999}
+.comics{display:flex; flex-wrap:wrap; gap:28px; justify-content:center; align-items:flex-end; margin:2.8rem 0 0}
+.comics figure{margin:0; text-align:center}
+.comics img{max-height:380px; width:auto; border:1px solid #ddd}
+.comics figcaption{font-size:.75rem; color:var(--note)}
+.strip{display:block; margin:0 auto 2rem; max-width:760px; width:100%; border:1px solid #ddd}
+
+/* teaching evaluations table */
+.tablewrap{overflow-x:auto; margin:1rem 0 1.4rem}
+table.evals{border-collapse:collapse; font-size:.9rem; min-width:640px}
+.evals th{background:#1155cc; color:#fff; font-weight:700; padding:.35rem .55rem; border:1px solid #ccc;
+  vertical-align:bottom; line-height:1.25}
+.evals td{padding:.25rem .55rem; border:1px solid #ccc; text-align:center; line-height:1.35}
+.evals td.cls{text-align:left}
+.evals td.nw{white-space:nowrap}
+.evals td.mine{color:#6aa84f; font-weight:700}
+.evals td.univ{font-weight:700}
+
+/* code */
+.gh img{width:72px; display:block; margin-bottom:1.2rem}
+.pk-title{font-weight:700; font-size:1.15rem; margin:0 0 1rem}
+.pkg{font-family:'Courier New',Courier,monospace; font-weight:700; font-size:1.08rem; margin:1.6rem 0 .5rem}
+.pkg .tag{color:var(--muted)}
+.about{font-size:.97rem}
+
+/* fun */
+.fun h2 .sub{color:#434343; font-style:italic; font-size:1.05rem; font-weight:400; margin-left:.3rem}
+.fun .shots{display:flex; flex-wrap:wrap; gap:40px; justify-content:center; margin-top:1.6rem}
+.fun .shots img{max-height:560px; width:auto}
+
+footer{border-top:1px solid var(--rule); color:#999; font-size:.8rem; text-align:center; padding:1.1rem 1rem 1.6rem}
+
+@media (max-width:860px){
+  .bar > nav{display:none}
+  .menu{display:block}
+  .home-grid{grid-template-columns:1fr; gap:36px}
+  .side{max-width:340px}
+  .banner{min-height:260px}
+  .banner.home{min-height:300px}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:560px){
+  body{font-size:15.5px}
+  h2{font-size:1.5rem}
+  h2.org{font-size:1.3rem}
+  .comics img{max-height:none; width:100%}
+  .fun .shots img{max-height:none; width:100%}
+}
