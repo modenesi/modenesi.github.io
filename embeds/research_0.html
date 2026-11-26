@@ -82,10 +82,16 @@ a.title:hover{color:var(--accent); text-decoration:underline; text-underline-off
   .meta{gap:.3rem .5rem}
 }
 </style>
-</head><body><div class='wrap'>
+<style>
+.gh-topics{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1.5rem}
+.gh-topics a{display:inline-block;padding:6px 14px;border:1px solid #cfd5df;border-radius:999px;color:#14181f;
+  background:#fff;text-decoration:none;font-size:14px;line-height:1.35;transition:background .15s,color .15s,border-color .15s}
+.gh-topics a:hover,.gh-topics a:focus-visible{background:#14181f;border-color:#14181f;color:#fff}
+h2.theme{scroll-margin-top:80px}
+</style></head><body><div class='wrap'><nav class='gh-topics' aria-label='Research topics'><a href='#responsible-ai-fairness-explainability-and-evaluation' target='_self' data-topic='responsible-ai-fairness-explainability-and-evaluation'>Responsible AI</a><a href='#ai-for-clinical-decision-making-and-health-outcomes' target='_self' data-topic='ai-for-clinical-decision-making-and-health-outcomes'>Clinical AI</a><a href='#causal-inference-and-decomposition-methods' target='_self' data-topic='causal-inference-and-decomposition-methods'>Causal Inference</a><a href='#machine-learning-methods-and-scientific-ml' target='_self' data-topic='machine-learning-methods-and-scientific-ml'>Machine Learning</a><a href='#labor-market-and-network-theory' target='_self' data-topic='labor-market-and-network-theory'>Labor &amp; Networks</a><a href='#applied-economics-and-public-policy' target='_self' data-topic='applied-economics-and-public-policy'>Economics &amp; Policy</a></nav>
 <p class='lede'>Full list on <a href='https://scholar.google.com/citations?user=rldiJ38AAAAJ&hl=en'>Google Scholar</a>. <span class='key'><b>*</b> first, joint-first, or equal contribution</span> &nbsp; <span class='key'><b>+</b> senior author</span></p>
 <section>
-<h2 class='theme'>Responsible AI: Fairness, Explainability, and Evaluation</h2>
+<h2 class='theme' id='responsible-ai-fairness-explainability-and-evaluation'>Responsible AI: Fairness, Explainability, and Evaluation</h2>
 <p class='blurb'>Detecting and quantifying discrimination and uncertainty disparities in deployed models, without thresholds chosen after the fact.</p>
 <ul class='list'>
 <li class='item'>
@@ -115,7 +121,7 @@ a.title:hover{color:var(--accent); text-decoration:underline; text-underline-off
 </li>
 </ul></section>
 <section>
-<h2 class='theme'>AI for Clinical Decision-Making and Health Outcomes</h2>
+<h2 class='theme' id='ai-for-clinical-decision-making-and-health-outcomes'>AI for Clinical Decision-Making and Health Outcomes</h2>
 <p class='blurb'>Measuring and improving high-stakes clinical decisions with machine learning: shared decision-making, antibiotic choice, screening, and transmission.</p>
 <ul class='list'>
 <li class='item'>
@@ -160,7 +166,7 @@ a.title:hover{color:var(--accent); text-decoration:underline; text-underline-off
 </li>
 </ul></section>
 <section>
-<h2 class='theme'>Causal Inference and Decomposition Methods</h2>
+<h2 class='theme' id='causal-inference-and-decomposition-methods'>Causal Inference and Decomposition Methods</h2>
 <p class='blurb'>Estimators that stay honest when the comparison you need does not exist in the data: counterfactual similarity, decomposition beyond common support, and extrapolation bias.</p>
 <ul class='list'>
 <li class='item'>
@@ -190,7 +196,7 @@ a.title:hover{color:var(--accent); text-decoration:underline; text-underline-off
 </li>
 </ul></section>
 <section>
-<h2 class='theme'>Machine Learning Methods and Scientific ML</h2>
+<h2 class='theme' id='machine-learning-methods-and-scientific-ml'>Machine Learning Methods and Scientific ML</h2>
 <p class='blurb'>Graph learning, information-theoretic objectives, and fast calibration of mechanistic scientific models.</p>
 <ul class='list'>
 <li class='item'>
@@ -225,7 +231,7 @@ a.title:hover{color:var(--accent); text-decoration:underline; text-underline-off
 </li>
 </ul></section>
 <section>
-<h2 class='theme'>Labor Market and Network Theory</h2>
+<h2 class='theme' id='labor-market-and-network-theory'>Labor Market and Network Theory</h2>
 <p class='blurb'>What counts as a market, and what that definition does to every estimate built on top of it.</p>
 <ul class='list'>
 <li class='item'>
@@ -250,7 +256,7 @@ a.title:hover{color:var(--accent); text-decoration:underline; text-underline-off
 </li>
 </ul></section>
 <section>
-<h2 class='theme'>Applied Economics and Public Policy</h2>
+<h2 class='theme' id='applied-economics-and-public-policy'>Applied Economics and Public Policy</h2>
 <p class='blurb'>Industrial organization of health care markets, monetary policy and income distribution, and firearm policy evaluation.</p>
 <ul class='list'>
 <li class='item'>
@@ -274,4 +280,45 @@ a.title:hover{color:var(--accent); text-decoration:underline; text-underline-off
 <p class='meta'><span class='pill s-published'>published</span><span class='dot'>&middot;</span><span class='venue'>CEDEPLAR-UFMG</span><span class='dot'>&middot;</span><span class='year'>2010</span></p>
 </li>
 </ul></section>
-</div></body></html>
+</div><script>
+/* Topic buttons. The list sits in a frame as tall as the list, so a click scrolls the page
+   itself (minus the fixed 56 px top bar) and adds #topic to the page address (Back returns).
+   research.html#topic opens at that topic. Opened on its own, the list uses plain #links. */
+(function () {
+  var nav = document.querySelector('.gh-topics'), frame = null;
+  try { frame = window.frameElement; } catch (err) {}
+  if (!nav || !frame) return;
+  var P = parent;
+  function go(id, smooth, focus) {
+    var h = document.getElementById(id);
+    if (!h) return false;
+    var bar = P.document.querySelector('.VLoccc');
+    var y = frame.getBoundingClientRect().top + h.getBoundingClientRect().top + P.scrollY
+            - (bar ? bar.getBoundingClientRect().height : 56) - 16;
+    var still = P.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    P.scrollTo({top: y, behavior: smooth && !still ? 'smooth' : 'auto'});
+    if (focus) { h.setAttribute('tabindex', '-1'); h.focus({preventScroll: true}); }   // keyboard users land on the topic
+    return true;
+  }
+  var settled = false;
+  function stop() { settled = true; }
+  nav.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-topic]');
+    if (!a) return;
+    e.preventDefault();
+    stop();
+    go(a.dataset.topic, true, true);
+    P.history.pushState(null, '', '#' + a.dataset.topic);
+  });
+  P.addEventListener('hashchange', function () { go(P.location.hash.slice(1), true); });
+  var first = P.location.hash.slice(1);
+  if (first && document.getElementById(first)) {
+    ['wheel', 'touchstart', 'keydown'].forEach(function (t) {
+      P.addEventListener(t, stop, {once: true, passive: true});
+    });
+    var grow = new P.ResizeObserver(function () { if (!settled) go(first, false); });
+    grow.observe(frame);
+    setTimeout(function () { grow.disconnect(); }, 4000);
+  }
+})();
+</script></body></html>
